@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta name="description" content="LoopMe AR GE BestBuy">
+        <meta name="author" content="OreYusuf">
+
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div id="mob-only">
+            <h1> MOBILE DEVICES ONLY </h1>
+        </div>    
+
+        <header>
+            <img id="GE_CTA" src="assets/topLogo.png" alt="GE_CTA">
+        </header>
+
+        <main>
+
+            <model-viewer 
+                src="assets/Fridge10.glb" 
+                ios-src="assets/Fridge10.usdz"
+                ar-placement="floor"
+                ar 
+                camera-controls 
+                disable-zoom
+                ar-modes="webxr scene-viewer quick-look" 
+                poster="poster.webp"
+                shadow-intensity="1"
+                camera-orbit="-19.34deg 71.25deg 1.65m"
+                min-camera-orbit="auto auto 3.029m"
+                max-camera-orbit="auto auto 1.65m" 
+                min-field-of-view="auto"
+                max-field-of-view="auto"
+                auto-rotate
+            >
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    <img id="img_AR_CTA" src="assets/CTA.png" alt="GE_CTA">
+                </button>
+
+                <div id="lazy-load-poster" slot="poster">
+                    <img id="img_load" src="assets/Spinner.gif" alt="GE_CTA">
+                </div>
+
+                <button id="HotspotID" class="Hotspot" slot="hotspot-1" data-position="0.44357320109026166m 0.6171367675538764m 0.7464767562947859m" data-normal="0.04171565086875601m 0m 0.9991295233715178m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">
+                        
+                        <img class= "bounce" id="Hotspot_1" src="assets/AutoFill_v1.png">
+                    </div>
+                </button>
+
+            </model-viewer>
+
+
+        </main>
+
+        <footer>
+
+            <img id="shopNow_CTA" src="assets/text.png" onclick="clickAR()" alt="GE_CTA">
+
+        </footer>
+
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            function clickAR() {
+                document.getElementById("ar-button").click();
+            }
+        </script>
+        
+    </body>
+</html>
