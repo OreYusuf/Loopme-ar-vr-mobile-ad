@@ -30,7 +30,7 @@ The project was served for publishing on Google's AdMob giving the target consum
 <hr>
 
 ### View On Mobile
-####[Available to preview here 🔗](  )
+####[Available to preview on your mobile device here 🔗](https://oreyusuf.github.io/Loopme-ar-vr-mobile-ad/)
 
 <br>
 <br>
